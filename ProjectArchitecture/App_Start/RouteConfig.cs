@@ -14,23 +14,26 @@ namespace ProjectArchitecture
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-
                 name: "Student",
-                url:"student/{id}",
-                defaults: new { controller = "Student", action = "Index"}
-                
+                url: "students/{id}",
+                defaults: new
+                {
+                    controller = "Student",
+                    action = "Index"
+                }
             );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Index",
+                    id = UrlParameter.Optional
+                }
             );
         }
 
-        protected void Application_Start()
-        {
-            RegisterRoutes(RouteTable.Routes);
-        }
     }
 }
