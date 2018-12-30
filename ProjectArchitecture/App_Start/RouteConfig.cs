@@ -15,7 +15,7 @@ namespace ProjectArchitecture
 
             routes.MapRoute(
                 name: "Student",
-                url: "students/{id}",
+                url: "student/{id}",
                 defaults: new
                 {
                     controller = "Student",
